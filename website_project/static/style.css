@@ -3,7 +3,6 @@
 body {
     background-image: url("bg_img.jpg");
     font-family: 'Trocchi', serif;
-    /*color: #7c795d;*/
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -12,7 +11,7 @@ body {
     padding: 32px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) { /* takes care of responsiveness */
     body {
         background-position: 0 40%;
     }
@@ -50,19 +49,17 @@ li {
 }
 
 #loading-box {
-    display: none;
     padding: 30px;
     margin: 0 auto;
 
 }
 
-
-.loading {
-    border: 16px solid #f3f3f3;
+.loading { /*loading bar */
     border-radius: 50%;
-    border-top: 16px solid blue;
-    border-right: 16px solid green;
-    border-bottom: 16px solid red;
+    border: 16px solid blue;
+    border-right-color: green;
+    border-bottom-color: red;
+    border-left-color: black;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite;
@@ -72,16 +69,7 @@ li {
     padding: 50px;
 }
 
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
+@keyframes spin { /*loading bar */
     0% {
         transform: rotate(0deg);
     }
